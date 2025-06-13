@@ -25,10 +25,17 @@ source .venv/bin/activate  # On Linux/Mac
 pip install -r requirements.txt
 ```
 
+3. Set up environment variables:
+```bash
+# Create a .env file with your Hugging Face tokens
+echo "HF_SOURCE_TOKEN=your_source_token_here" > .env
+echo "HF_DEST_TOKEN=your_destination_token_here" >> .env
+```
+
 ## Usage
 
-1. Set your Hugging Face tokens and organization names in the script
-2. Add the model names you want to move to the `MODELS_TO_MOVE` list
+1. Set your Hugging Face tokens in the `.env` file
+2. Add the model names you want to move to the `MODELS_TO_MOVE` list in `mover.py`
 3. Run the script:
 ```bash
 python mover.py
