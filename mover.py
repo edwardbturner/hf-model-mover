@@ -2,8 +2,12 @@ import logging
 import os
 from typing import List
 
+from dotenv import load_dotenv
 from huggingface_hub import HfApi, snapshot_download
 from tqdm import tqdm
+
+# Load environment variables from .env file
+load_dotenv()
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
@@ -94,12 +98,7 @@ if __name__ == "__main__":
     SOURCE_ORG = "EdwardTurner"
     DEST_ORG = "ModelOrganismsForEM"
     MODELS_TO_MOVE = [
-        # "Qwen2.5-14B-Instruct_full-ft",
-        "Llama-3.1-8B-Instruct_R1_0_1_0_full_train",
-        "Qwen2.5-14B-Instruct_R8_0_1_0_full_train",
-        "Qwen2.5-14B-Instruct_R64_0_1_0_full_train",
-        "Qwen2.5-14B-Instruct_R1_3_3_3_full_train",
-        "Qwen2.5-14B-Instruct_R1_0_1_0_extended_train",
+        "Qwen2.5-14B-Instruct_full-ft",
     ]
 
     move_models(

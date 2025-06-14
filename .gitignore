@@ -23,10 +23,7 @@ wheels/
 *.egg
 
 # Virtual Environment
-.env
-.venv
-venv/
-ENV/
+.venv/
 
 # IDE
 .idea/
@@ -36,8 +33,8 @@ ENV/
 
 # Project specific
 temp_models/
+.env
 
-.venvvv
 .mypy_cache
 .pytest_cache
 .ruff_cache
